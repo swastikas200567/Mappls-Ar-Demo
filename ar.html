@@ -3,11 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AR Demo</title>
+  <title>AR View</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://apis.mappls.com/advancedmaps/api/tvplfonmvdhzrdyuvwometacqhruxazmgijz/map_sdk?layer=vector"></script>
 </head>
 <body>
-  <h2>🚀 AR Globe Demo</h2>
-  <div class="globe"></div>
+  <div class="container">
+    <h1>🔍 AR View</h1>
+    <div id="map"></div>
+    <a href="index.html" class="btn back">⬅ Back</a>
+  </div>
+
+  <script>
+    // For now, AR = normal map placeholder (Mappls AR SDK is mobile-only).
+    var map = new mappls.Map('map', {
+      center: [19.07, 72.87], // Mumbai
+      zoom: 12
+    });
+  </script>
 </body>
 </html>
