@@ -1,1 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AR Demo</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- A-Frame + AR.js (marker-based AR) -->
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@3.4.5/aframe/build/aframe-ar.js"></script>
+</head>
+<body class="ar-body">
+  <div class="hint">Point your camera at the <b>HIRO</b> marker</div>
+
+  <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
+    <!-- Show objects when the HIRO marker is seen -->
+    <a-marker preset="hiro">
+      <a-box position="0 0.5 0" depth="0.5" height="0.5" width="0.5" color="#ff69b4"></a-box>
+      <a-text value="Hello from Mriganka!" position="-0.9 1.1 0" color="#fff"></a-text>
+    </a-marker>
+
+    <a-entity camera></a-entity>
+  </a-scene>
+
+  <a class="back" href="index.html">← Back</a>
+</body>
+</html>
 
