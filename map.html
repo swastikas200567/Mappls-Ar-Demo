@@ -1,32 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Map View</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Mappls SDK -->
-  <link rel="stylesheet" href="https://apis.mappls.com/advancedmaps/api/tvplfonmvdhzrdyuvwometacqhruxazmgijz/map_sdk.css" />
-  <script src="https://apis.mappls.com/advancedmaps/api/tvplfonmvdhzrdyuvwometacqhruxazmgijz/map_sdk.js"></script>
-
   <link rel="stylesheet" href="style.css">
+  <script src="https://apis.mappls.com/advancedmaps/api/tvplfonmvdhzrdyuvwometacqhruxazmgijz/map_sdk?layer=vector"></script>
 </head>
 <body>
-  <h2>🗺️ Map View</h2>
-  <div id="map"></div>
+  <div class="container">
+    <h1>🗺️ Map View</h1>
+    <div id="map"></div>
+    <a href="index.html" class="btn back">⬅ Back</a>
+  </div>
 
   <script>
     var map = new mappls.Map('map', {
-      center: [28.6139, 77.2090], // Delhi
-      zoom: 12
-    });
-
-    var marker = new mappls.Marker({
-      map: map,
-      position: { lat: 28.6139, lng: 77.2090 },
-      popupHtml: "<b>Hello!</b> This is Delhi 📍"
+      center: [28.61, 77.23], // Delhi
+      zoom: 5
     });
   </script>
 </body>
 </html>
-
